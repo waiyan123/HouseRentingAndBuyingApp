@@ -6,6 +6,7 @@ import java.util.Map;
 
 import itachi_waiyan.com.hotelbuyingandrankingapp.data.vos.HotelVO;
 import itachi_waiyan.com.hotelbuyingandrankingapp.network.dataagent.HotelDataAgent;
+import itachi_waiyan.com.hotelbuyingandrankingapp.util.Constant;
 
 public class HotelModelImpl extends BaseModel implements HotelModel{
 

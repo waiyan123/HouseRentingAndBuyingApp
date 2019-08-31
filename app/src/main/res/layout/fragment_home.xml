@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     xmlns:tools="http://schemas.android.com/tools">
         <LinearLayout
             android:weightSum="10"
@@ -31,7 +33,11 @@
                     android:layout_height="wrap_content" />
                 <EditText
                     android:focusedByDefault="false"
+                    android:paddingTop="@dimen/card_corner_radius"
+                    android:paddingBottom="@dimen/card_corner_radius"
+                    android:background="@android:color/transparent"
                     android:hint="@string/type_your_location"
+                    android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>

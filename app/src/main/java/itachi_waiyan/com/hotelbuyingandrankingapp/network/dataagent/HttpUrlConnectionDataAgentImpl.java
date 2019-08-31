@@ -87,9 +87,14 @@ public class HttpUrlConnectionDataAgentImpl implements HotelDataAgent{
         protected void onPostExecute(HotelResponse getHotelResponse) {
             super.onPostExecute(getHotelResponse);
             if(getHotelResponse !=null){
-                networkDelegate.onSuccess(getHotelResponse.getHotelList());
+                if(getHotelResponse.isResponseOk()){
+                    networkDelegate.onSuccess(getHotelResponse.getHotelList());
+                }
+                else{
+                    networkDelegate.onFailure(getHotelResponse.getMessage());
+                }
             }else{
-                networkDelegate.onFailure("Can't connect to server");
+                networkDelegate.onFailure(Constant.EM_NULL_EVENT_RESPONSE);
             }
         }
     }
