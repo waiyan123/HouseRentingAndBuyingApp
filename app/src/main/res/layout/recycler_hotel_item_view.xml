@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorMainBackground"
+    android:padding="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/inner_margin"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hotel_card_view_height">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:src="@drawable/hotel_view_3"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hotel_image_height" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="@dimen/filter_padding"
+            android:paddingBottom="@dimen/filter_padding"
+            android:paddingLeft="@dimen/card_corner_radius"
+            android:paddingRight="@dimen/card_corner_radius"
+            android:layout_marginStart="@dimen/app_bar_height"
+            android:layout_marginTop="@dimen/margin_top1"
+            android:background="@drawable/location_shape_background"
+            android:text="@string/cash"
+            android:textColor="@color/black" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/card_corner_radius"
+            android:id="@+id/ll_card1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="@dimen/margin_top1"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/card_corner_radius"
+                    android:text="@string/location_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/card_corner_radius"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_open_with_black_24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/card_corner_radius"
+                        android:text="@string/lbl_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/icon_size_normal"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_local_hotel_black_24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/card_corner_radius"
+                        android:text="@string/lbl_bedrooms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_near_me"
+                app:layout_anchor="@id/ll_card1"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="@dimen/icon_size_small"
+                app:fabSize="mini"
+                app:layout_anchorGravity="top|right|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+    </FrameLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
