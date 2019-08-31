@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import itachi_waiyan.com.hotelbuyingandrankingapp.R;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends BaseActivity {
     ImageView imgBack;
 
     @Override

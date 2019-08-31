@@ -12,15 +12,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import itachi_waiyan.com.hotelbuyingandrankingapp.MainActivity;
 import itachi_waiyan.com.hotelbuyingandrankingapp.R;
 import itachi_waiyan.com.hotelbuyingandrankingapp.adapters.HomeViewPagerAdapter;
+import itachi_waiyan.com.hotelbuyingandrankingapp.data.model.HotelModel;
 
 public class HomeFragment extends Fragment{
     ViewPager viewPager ;
     TabLayout tabs;
     HomeViewPagerAdapter adapter;
     Fragment topCollectionFragment,nearMeFragment,lowToHighFragment;
+    List<HotelModel>hotelModelList;
 
     @Nullable
     @Override
@@ -35,6 +39,8 @@ public class HomeFragment extends Fragment{
 
         return view;
     }
+
+
 
     public void setUpWithViewPager(ViewPager vp){
         topCollectionFragment = new TopCollectionFragment();

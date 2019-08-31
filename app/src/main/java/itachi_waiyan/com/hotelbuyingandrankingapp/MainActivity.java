@@ -12,36 +12,30 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import itachi_waiyan.com.hotelbuyingandrankingapp.activities.BaseActivity;
 import itachi_waiyan.com.hotelbuyingandrankingapp.activities.DetailActivity;
 import itachi_waiyan.com.hotelbuyingandrankingapp.adapters.MainViewPagerAdapter;
 import itachi_waiyan.com.hotelbuyingandrankingapp.data.model.HotelModel;
-import itachi_waiyan.com.hotelbuyingandrankingapp.data.model.HotelModelImpl;
 import itachi_waiyan.com.hotelbuyingandrankingapp.data.vos.HotelVO;
 import itachi_waiyan.com.hotelbuyingandrankingapp.delegates.EventHotelItemDelegate;
 import itachi_waiyan.com.hotelbuyingandrankingapp.fragments.HomeFragment;
 
-public class MainActivity extends AppCompatActivity implements EventHotelItemDelegate {
+public class MainActivity extends BaseActivity implements EventHotelItemDelegate {
 
     ViewPager viewPager;
     MainViewPagerAdapter adapter;
     TabLayout tabs;
     Fragment fragmentForYou, fragmentBookmark, fragmentFavourite,fragmentLocation,fragmentProfile,fragmentSetting;
-    private HotelModel hotelModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        hotelModel = HotelModelImpl.getObjInstance();
-
         hotelModel.getHotels(new HotelModel.GetHotelsFromDataLayerDelegate() {
             @Override
             public void onSuccess(List<HotelVO> hotelList) {
-                int count=0;
-                if(hotelList != null)
-                    count=hotelList.size();
-                Toast.makeText(getApplicationContext(),"Success " + count,Toast.LENGTH_LONG).show();
+
             }
 
             @Override

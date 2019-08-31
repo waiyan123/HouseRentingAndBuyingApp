@@ -30,6 +30,9 @@ public class HotelModelImpl extends BaseModel implements HotelModel{
         mDataAgent.getHotelsFromNetwork(new HotelDataAgent.GetHotelsFromNetworkDelegate() {
             @Override
             public void onSuccess(List<HotelVO> hotelList) {
+                for(HotelVO hotel : hotelList){
+                    mDataRepository.put(hotel.getId(),hotel);
+                }
                 dataLayerDelegate.onSuccess(hotelList);
             }
 
