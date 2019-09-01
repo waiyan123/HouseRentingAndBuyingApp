@@ -24,7 +24,6 @@ public class HomeFragment extends Fragment{
     TabLayout tabs;
     HomeViewPagerAdapter adapter;
     Fragment topCollectionFragment,nearMeFragment,lowToHighFragment;
-    List<HotelModel>hotelModelList;
 
     @Nullable
     @Override
@@ -44,8 +43,8 @@ public class HomeFragment extends Fragment{
 
     public void setUpWithViewPager(ViewPager vp){
         topCollectionFragment = new TopCollectionFragment();
-        nearMeFragment = new TopCollectionFragment();
-        lowToHighFragment = new TopCollectionFragment();
+        nearMeFragment = new NearMeFragment();
+        lowToHighFragment = new LtoHFragment();
         adapter = new HomeViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(topCollectionFragment,getResources().getString(R.string.top_collection));
         adapter.addFragment(nearMeFragment,getResources().getString(R.string.near_me));
