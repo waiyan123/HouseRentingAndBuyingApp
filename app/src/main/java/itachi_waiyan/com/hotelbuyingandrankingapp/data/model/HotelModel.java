@@ -12,4 +12,5 @@ public interface HotelModel {
         void onSuccess(List<HotelVO> houseList);
         void onFailure(String errorMessage);
     }
+
 }

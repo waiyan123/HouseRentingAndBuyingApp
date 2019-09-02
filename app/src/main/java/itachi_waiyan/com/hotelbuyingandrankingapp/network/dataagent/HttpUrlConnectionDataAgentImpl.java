@@ -33,10 +33,10 @@ public class HttpUrlConnectionDataAgentImpl implements HotelDataAgent{
         new GetHotelTask(networkDelegate).execute();
     }
 
-    public class GetHotelTask extends AsyncTask<Void,Void, HotelResponse> {
+    public static class GetHotelTask extends AsyncTask<Void,Void, HotelResponse> {
         private GetHotelsFromNetworkDelegate networkDelegate;
 
-        public GetHotelTask(GetHotelsFromNetworkDelegate networkDelegate) {
+        private GetHotelTask(GetHotelsFromNetworkDelegate networkDelegate) {
             this.networkDelegate = networkDelegate;
         }
 

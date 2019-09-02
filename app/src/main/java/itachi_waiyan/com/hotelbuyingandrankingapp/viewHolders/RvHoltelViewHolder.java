@@ -7,9 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import itachi_waiyan.com.hotelbuyingandrankingapp.R;
+import itachi_waiyan.com.hotelbuyingandrankingapp.data.vos.HotelVO;
 import itachi_waiyan.com.hotelbuyingandrankingapp.delegates.EventHotelItemDelegate;
 
-public class RvHoltelViewHolder extends RecyclerView.ViewHolder {
+public class RvHoltelViewHolder extends BaseViewHolder<HotelVO> {
 
     private EventHotelItemDelegate mEventHotelItemDelegate;
 
@@ -30,5 +31,10 @@ public class RvHoltelViewHolder extends RecyclerView.ViewHolder {
                 mEventHotelItemDelegate.onTabEventItem();
             }
         });
+    }
+
+    @Override
+    public void bindData(HotelVO data) {
+
     }
 }

@@ -18,7 +18,7 @@ import itachi_waiyan.com.hotelbuyingandrankingapp.data.vos.HotelVO;
 import itachi_waiyan.com.hotelbuyingandrankingapp.delegates.EventHotelItemDelegate;
 import itachi_waiyan.com.hotelbuyingandrankingapp.viewHolders.RvHoltelViewHolder;
 
-public class HotelRecyclerViewAdapter extends RecyclerView.Adapter{
+public class HotelRecyclerViewAdapter extends BaseRecyclerAdapter{
     EventHotelItemDelegate mEventItemDelegate;
     List<HotelVO>hotelList;
     Context context;

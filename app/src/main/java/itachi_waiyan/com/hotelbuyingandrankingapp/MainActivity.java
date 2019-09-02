@@ -102,6 +102,7 @@ public class MainActivity extends BaseActivity implements EventHotelItemDelegate
 
     @Override
     public void onTabEventItem() {
-        startActivity(new Intent(MainActivity.this, DetailActivity.class));
+        Intent intent = new Intent();
+        startActivity(intent);
     }
 }
