@@ -4,15 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class HotelVO {
 
+    @SerializedName("id")
     private int id;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @SerializedName("house_image_url")
     private String houseImageUrl;
@@ -38,6 +31,14 @@ public class HotelVO {
     @SerializedName("longitude")
     private double longitude;
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getHouseImageUrl() {
         return houseImageUrl;

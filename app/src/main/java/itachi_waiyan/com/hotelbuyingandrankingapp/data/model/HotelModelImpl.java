@@ -17,8 +17,6 @@ public class HotelModelImpl extends BaseModel implements HotelModel{
         mDataRepository=new HashMap<>();
     }
 
-
-
     public static HotelModelImpl getObjInstance(){
         if(objInstance == null)
             objInstance=new HotelModelImpl();

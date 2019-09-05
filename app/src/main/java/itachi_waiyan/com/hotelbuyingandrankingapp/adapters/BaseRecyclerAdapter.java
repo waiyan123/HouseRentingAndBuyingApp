@@ -20,4 +20,14 @@ public abstract class BaseRecyclerAdapter<T extends BaseViewHolder<W>,W> extends
     public int getItemCount() {
         return mData.size();
     }
+
+    public void setNewData(List<W>data){
+        mData = data;
+        notifyDataSetChanged();
+    }
+
+    public void appendNewData(List<W>data){
+        mData.addAll(data);
+        notifyDataSetChanged();
+    }
 }

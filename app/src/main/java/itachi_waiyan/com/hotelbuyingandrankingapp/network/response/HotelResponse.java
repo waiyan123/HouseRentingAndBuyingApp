@@ -7,6 +7,7 @@ import java.util.List;
 import itachi_waiyan.com.hotelbuyingandrankingapp.data.vos.HotelVO;
 import itachi_waiyan.com.hotelbuyingandrankingapp.util.Constant;
 
+
 public class HotelResponse {
 
     @SerializedName("message")
@@ -45,4 +46,5 @@ public class HotelResponse {
     public boolean isResponseOk(){
         return code == Constant.CODE_RESPONSE_OK && hotelList!= null;
     }
+
 }
