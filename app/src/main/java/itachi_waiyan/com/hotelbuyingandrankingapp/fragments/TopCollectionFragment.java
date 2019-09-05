@@ -47,6 +47,9 @@ public class TopCollectionFragment extends Fragment {
             @Override
             public void onSuccess(List<HotelVO> hotelList) {
                 hotelVOList = hotelList;
+                HotelRecyclerViewAdapter adapter = new HotelRecyclerViewAdapter(getContext(),mEventHotelItemDelegate,hotelVOList);
+                rvHotel.setAdapter(adapter);
+                rvHotel.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
             }
 
             @Override
@@ -54,9 +57,7 @@ public class TopCollectionFragment extends Fragment {
                 Toast.makeText(view.getContext(),errorMessage,Toast.LENGTH_LONG).show();
             }
         });
-        HotelRecyclerViewAdapter adapter = new HotelRecyclerViewAdapter(getContext(),mEventHotelItemDelegate,hotelVOList);
-        rvHotel.setAdapter(adapter);
-        rvHotel.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+
     }
 
     @Override

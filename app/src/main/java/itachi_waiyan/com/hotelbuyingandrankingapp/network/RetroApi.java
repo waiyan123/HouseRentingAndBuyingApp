@@ -6,9 +6,10 @@ import itachi_waiyan.com.hotelbuyingandrankingapp.network.response.HotelResponse
 import itachi_waiyan.com.hotelbuyingandrankingapp.util.Constant;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 
 public interface RetroApi {
 
-    @GET ("/getAllHouses")
+    @POST("/getAllHouses")
     Call<HotelResponse>getHotelResponse();
 }
